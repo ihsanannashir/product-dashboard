@@ -1,6 +1,7 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export type CartProduct = {
   id?: number;
@@ -48,5 +49,13 @@ export const columns: ColumnDef<Cart>[] = [
   {
     accessorKey: "id",
     header: "",
+    cell: ({ row }) => {
+      const getId = row.getValue("id");
+      return (
+        <Link href={`/carts/${getId}`} className="hover:underline">
+          See Details
+        </Link>
+      );
+    },
   },
 ];
