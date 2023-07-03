@@ -1,11 +1,12 @@
+import CartPage from "@/components/carts/Page";
 import useAxios from "axios-hooks";
 import Head from "next/head";
 
-const CartPage = () => {
+const Cart = () => {
   return (
     <>
       <Head>
-        <title>Carts</title>
+        <title>Carts List</title>
         <meta
           name="description"
           content="Online Test - Frontend Engineer - Ihsan An-Nashir"
@@ -13,9 +14,9 @@ const CartPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>hahaha</div>
+      <CartPage />
     </>
   );
 };
 
-export default CartPage;
+export default Cart;
